@@ -1,3 +1,7 @@
+<!-- December 08, 2017 -->
+
+Anti-Forgery Stake Tokens
+
 # OAuth2.0
 Starter Code for Auth&amp;Auth course
 # Vagrant VM  - Authentication & Authorization
