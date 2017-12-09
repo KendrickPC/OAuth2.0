@@ -1,3 +1,9 @@
+<!-- December 09, 2017 -->
+
+[] Obtaining Credentials Of An Existing User
+[] Impliment Local Persmission Systems for each individual user. 
+[] Implimented Gconnect and Gdisconnect. 
+
 <!-- December 08, 2017 -->
 
 Anti-Forgery Stake Tokens
