@@ -1,5 +1,6 @@
 <!-- December 09, 2017 -->
 
+[] Local permission systems are setup for publicrestaurants.html and publicmenu.html
 [] Obtaining Credentials Of An Existing User
 [] Impliment Local Persmission Systems for each individual user. 
 [] Implimented Gconnect and Gdisconnect. 
