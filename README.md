@@ -1,3 +1,7 @@
+<!-- December 12, 2017 -->
+
+[] Implimenting FB login permissions. 
+
 <!-- December 09, 2017 -->
 
 [] Local permission systems are setup for publicrestaurants.html and publicmenu.html

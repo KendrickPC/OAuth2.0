@@ -1,19 +1,27 @@
-<!DOCTYPE html>
-<html>
 <head>
 
   <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
   </script>
+
 <script src="//apis.google.com/js/platform.js?onload=start"> </script>
+
 <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+
 </head>
-<body>  
-<!-- GOOGLE PLUS SIGN IN-->       
-        <div id="signinButton">
+
+
+<body>
+
+
+<!-- GOOGLE PLUS SIGN IN-->
+
+
+          <div id="signinButton">
           <span class="g-signin"
             data-scope="openid email"
-            data-clientid="376642414498-p2fuhgvovjjahkdk0t746f2ccnmd9ao4.apps.googleusercontent.com"
+            data-clientid="YOUR_CLIENT_ID_GOES_HERE.apps.googleusercontent.com"
             data-redirecturi="postmessage"
             data-accesstype="offline"
             data-cookiepolicy="single_host_origin"
@@ -23,22 +31,6 @@
         </div>
 
 <div id="result"></div>
-
-<!-- begin fb login -->
-
-<button>
-
-
-          <fb:login-button scope="public_profile,email" onlogin="sendTokenToServer();">
-<a href='javascript:sendTokenToServer()'>Login with Facebook</a>
-
-</fb:login-button>
-
-
-        </button>
-
-<!-- end fb login -->
-
 
 <script>
 function signInCallback(authResult) {
@@ -57,11 +49,11 @@ function signInCallback(authResult) {
       success: function(result) {
         // Handle or verify the server response if necessary.
         if (result) {
-          $('#result').html('Login Successful! Good Job Kenneth!!!</br>'+ result + '</br>Redirecting...')
+          $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
          setTimeout(function() {
           window.location.href = "/restaurant";
          }, 4000);
-          
+
 
       } else if (authResult['error']) {
 
@@ -71,20 +63,23 @@ function signInCallback(authResult) {
          }
 
       }
-      
+
   }); } }
 </script>
+
+
+
 <!--END GOOGLE PLUS SIGN IN -->
 
 <!--FACEBOOK SIGN IN -->
 <script>
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '738903766305602',
-    cookie     : true,  // enable cookies to allow the server to access 
+    appId      : 'PASTE_YOUR_APP_ID_HERE',
+    cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.2' // use version 2.2
+    version    : 'v2.8' // use version 2.8
   });
 
   };
@@ -119,14 +114,14 @@ function signInCallback(authResult) {
          setTimeout(function() {
           window.location.href = "/restaurant";
          }, 4000);
-          
+
 
       } else {
         $('#result').html('Failed to make a server-side call. Check your configuration and console.');
          }
 
       }
-      
+
   });
 
 
@@ -136,7 +131,7 @@ function signInCallback(authResult) {
 
 
 <button>
-         
+
 
           <fb:login-button scope="public_profile,email" onlogin="sendTokenToServer();">
 <a href='javascript:sendTokenToServer()'>Login with Facebook</a>
@@ -146,5 +141,7 @@ function signInCallback(authResult) {
 
         </button>
 <!--END FACEBOOK SIGN IN -->
+
   </body>
-</html>
+
+  </html>
